@@ -174,6 +174,7 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip"
 import Link from "next/link"
+
 import { useState } from "react"
 
 function SectionHeader({
@@ -219,6 +220,7 @@ export default function ComponentsPage() {
     const [progress] = useState(60)
     const [sliderValue, setSliderValue] = useState([50])
     const [isOpen, setIsOpen] = useState(false)
+    const [commandOpen, setCommandOpen] = useState(false)
 
     return (
         <div className="min-h-screen bg-background">
@@ -1136,28 +1138,57 @@ export default function ComponentsPage() {
                         </Tooltip>
                     </ComponentBox>
 
-                    <ComponentBox title="Command">
-                        <Command className="w-full max-w-xs rounded-lg border">
-                            <CommandInput placeholder="Search J.A.R.V.I.S. commands..." />
-                            <CommandList>
-                                <CommandEmpty>No systems found.</CommandEmpty>
-                                <CommandGroup heading="Arc Reactor Systems">
-                                    <CommandItem>
-                                        Initialize Mark VII
-                                    </CommandItem>
-                                    <CommandItem>
-                                        Activate Defense Mode
-                                    </CommandItem>
-                                    <CommandItem>Run Diagnostics</CommandItem>
-                                </CommandGroup>
-                                <CommandGroup heading="Facilities">
-                                    <CommandItem>Stark Tower</CommandItem>
-                                    <CommandItem>Avengers Compound</CommandItem>
-                                    <CommandItem>Malibu Mansion</CommandItem>
-                                </CommandGroup>
-                            </CommandList>
-                        </Command>
-                    </ComponentBox>
+                    <Collapsible
+                        open={commandOpen}
+                        onOpenChange={setCommandOpen}
+                        className="col-span-1 md:col-span-2"
+                    >
+                        <CollapsibleTrigger asChild>
+                            <button type="button" className="w-full text-left">
+                                <ComponentBox title="Command">
+                                    <span className="text-sm text-muted-foreground">
+                                        {commandOpen
+                                            ? "Click to collapse"
+                                            : "Click to expand Command component"}
+                                    </span>
+                                </ComponentBox>
+                            </button>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                            <ComponentBox title="Command Preview">
+                                <Command className="w-full max-w-xs rounded-lg border">
+                                    <CommandInput placeholder="Search J.A.R.V.I.S. commands..." />
+                                    <CommandList>
+                                        <CommandEmpty>
+                                            No systems found.
+                                        </CommandEmpty>
+                                        <CommandGroup heading="Arc Reactor Systems">
+                                            <CommandItem>
+                                                Initialize Mark VII
+                                            </CommandItem>
+                                            <CommandItem>
+                                                Activate Defense Mode
+                                            </CommandItem>
+                                            <CommandItem>
+                                                Run Diagnostics
+                                            </CommandItem>
+                                        </CommandGroup>
+                                        <CommandGroup heading="Facilities">
+                                            <CommandItem>
+                                                Stark Tower
+                                            </CommandItem>
+                                            <CommandItem>
+                                                Avengers Compound
+                                            </CommandItem>
+                                            <CommandItem>
+                                                Malibu Mansion
+                                            </CommandItem>
+                                        </CommandGroup>
+                                    </CommandList>
+                                </Command>
+                            </ComponentBox>
+                        </CollapsibleContent>
+                    </Collapsible>
 
                     <SectionHeader title="Buttons" icon="" id="buttons" />
 
