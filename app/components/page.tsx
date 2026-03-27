@@ -175,7 +175,6 @@ import {
 } from "@/components/ui/tooltip"
 import Link from "next/link"
 import { useState } from "react"
-import { BrutalistHero } from "@/components/brutalist-hero"
 
 function SectionHeader({
     title,
@@ -215,7 +214,7 @@ function ComponentBox({
     )
 }
 
-export default function ShowcasePage() {
+export default function ComponentsPage() {
     const [date, setDate] = useState<Date | undefined>(new Date())
     const [progress] = useState(60)
     const [sliderValue, setSliderValue] = useState([50])
@@ -223,8 +222,6 @@ export default function ShowcasePage() {
 
     return (
         <div className="min-h-screen bg-background">
-            <BrutalistHero />
-
             <div className="mx-auto max-w-7xl px-6 py-8">
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <SectionHeader title="Forms" icon="" id="forms" />

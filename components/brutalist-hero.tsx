@@ -1,6 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
+import Link from "next/link"
 
 interface GridCell {
     id: number
@@ -203,13 +204,13 @@ export function BrutalistHero() {
                             : "translate-y-8 opacity-0"
                     }`}
                 >
-                    <a
-                        href="#forms"
+                    <Link
+                        href="/components"
                         className="group relative inline-flex items-center justify-center border-2 border-foreground bg-foreground px-8 py-3 font-mono text-sm tracking-widest text-background uppercase transition-all hover:bg-background hover:text-foreground"
                     >
                         <span className="relative z-10">Explore</span>
                         <span className="absolute inset-0 translate-x-1 translate-y-1 bg-foreground/10 transition-transform group-hover:translate-x-0 group-hover:translate-y-0" />
-                    </a>
+                    </Link>
                     <a
                         href="https://github.com/phalla-doll/shadcn-mono"
                         target="_blank"
@@ -235,24 +236,6 @@ export function BrutalistHero() {
                     <span>NEXT.JS</span>
                     <span className="h-3 w-px bg-muted-foreground/30" />
                     <span>TAILWIND</span>
-                </div>
-            </div>
-
-            {/* Scroll Indicator */}
-            <div
-                className={`absolute bottom-12 left-1/2 -translate-x-1/2 transition-all delay-1000 duration-700 ${
-                    isLoaded
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-4 opacity-0"
-                }`}
-            >
-                <div className="flex flex-col items-center gap-2">
-                    <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground/50 uppercase">
-                        Scroll
-                    </span>
-                    <div className="h-8 w-px bg-muted-foreground/30">
-                        <div className="h-2 w-px animate-bounce bg-muted-foreground" />
-                    </div>
                 </div>
             </div>
         </div>
