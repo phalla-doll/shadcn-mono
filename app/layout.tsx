@@ -1,6 +1,29 @@
+import type { Metadata } from "next"
 import { Geist, Space_Mono } from "next/font/google"
 
 import "./globals.css"
+
+export const metadata: Metadata = {
+    title: "Mono | Monochrome Design System",
+    description:
+        "A sleek monochrome UI component library built with ShadCN. Grid-based layouts, thin strokes, technical typography, and system-like micro-interactions.",
+    keywords: [
+        "monochrome",
+        "design system",
+        "shadcn",
+        "react",
+        "next.js",
+        "ui components",
+        "radix ui",
+    ],
+    authors: [{ name: "phalla-doll" }],
+    openGraph: {
+        title: "Mono | Monochrome Design System",
+        description:
+            "A sleek monochrome UI component library built with ShadCN",
+        type: "website",
+    },
+}
 import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
