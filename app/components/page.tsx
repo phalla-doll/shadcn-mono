@@ -271,7 +271,7 @@ export default function ComponentsPage() {
     const COMPONENT_COUNT = 49
     const GRID_ROWS = SECTION_COUNT + Math.ceil(COMPONENT_COUNT / 2)
 
-    let cellIndex = 0
+    const cellIndex = 0
 
     return (
         <div className="min-h-screen bg-background font-mono text-foreground">
@@ -1134,7 +1134,12 @@ export default function ComponentsPage() {
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Spinner">
-                            <Spinner className="border-2 border-foreground border-t-transparent" />
+                            <div className="flex flex-col items-center gap-3">
+                                <Spinner className="h-8 w-8 animate-spin text-foreground" />
+                                <p className="font-mono text-[10px] text-muted-foreground">
+                                    LOADING...
+                                </p>
+                            </div>
                         </ComponentBox>
                     </div>
 
@@ -1258,25 +1263,25 @@ export default function ComponentsPage() {
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Avatar">
-                            <div className="flex gap-2">
-                                <Avatar className="rounded-none border-2 border-foreground">
+                            <div className="flex -space-x-2">
+                                <Avatar className="rounded-full ring-2 ring-background">
                                     <AvatarImage src="https://github.com/shadcn.png" />
-                                    <AvatarFallback className="rounded-none border-2 border-foreground bg-muted font-mono text-xs text-foreground">
+                                    <AvatarFallback className="rounded-full bg-foreground font-mono text-xs text-background">
                                         TS
                                     </AvatarFallback>
                                 </Avatar>
-                                <Avatar className="rounded-none border-2 border-foreground">
-                                    <AvatarFallback className="rounded-none border-2 border-foreground bg-muted font-mono text-xs text-foreground">
+                                <Avatar className="rounded-full ring-2 ring-background">
+                                    <AvatarFallback className="rounded-full bg-muted font-mono text-xs text-foreground">
                                         PP
                                     </AvatarFallback>
                                 </Avatar>
-                                <Avatar className="rounded-none border-2 border-foreground">
-                                    <AvatarFallback className="rounded-none border-2 border-foreground bg-muted font-mono text-xs text-foreground">
+                                <Avatar className="rounded-full ring-2 ring-background">
+                                    <AvatarFallback className="rounded-full bg-muted font-mono text-xs text-foreground">
                                         BW
                                     </AvatarFallback>
                                 </Avatar>
-                                <Avatar className="rounded-none border-2 border-foreground">
-                                    <AvatarFallback className="rounded-none border-2 border-foreground bg-muted font-mono text-xs text-foreground">
+                                <Avatar className="rounded-full ring-2 ring-background">
+                                    <AvatarFallback className="rounded-full bg-muted font-mono text-xs text-foreground">
                                         CA
                                     </AvatarFallback>
                                 </Avatar>
