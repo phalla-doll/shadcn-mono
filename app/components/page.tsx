@@ -208,7 +208,7 @@ function ComponentBox({
             <h4 className="border-b pb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 {title}
             </h4>
-            <div className="flex min-h-[80px] flex-wrap items-center gap-3 rounded-lg p-4">
+            <div className="flex min-h-20 flex-wrap items-center gap-3 rounded-lg p-4">
                 {children}
             </div>
         </div>
@@ -304,7 +304,7 @@ export default function ComponentsPage() {
 
                     <ComponentBox title="Select">
                         <Select>
-                            <SelectTrigger className="w-[180px]">
+                            <SelectTrigger className="w-45">
                                 <SelectValue placeholder="Select suit..." />
                             </SelectTrigger>
                             <SelectContent>
