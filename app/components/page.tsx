@@ -267,6 +267,10 @@ export default function ComponentsPage() {
     const [isOpen, setIsOpen] = useState(false)
     const [commandOpen, setCommandOpen] = useState(false)
 
+    const SECTION_COUNT = 8
+    const COMPONENT_COUNT = 49
+    const GRID_ROWS = SECTION_COUNT + Math.ceil(COMPONENT_COUNT / 2)
+
     let cellIndex = 0
 
     return (
@@ -310,7 +314,7 @@ export default function ComponentsPage() {
                 <div className="relative grid grid-cols-1 border-x-2 border-foreground md:grid-cols-2">
                     {/* Row numbers - left side */}
                     <div className="absolute top-0 -left-8 h-full w-6 border-r border-border bg-muted/50">
-                        {Array.from({ length: 40 }).map((_, i) => (
+                        {Array.from({ length: GRID_ROWS }).map((_, i) => (
                             <div
                                 key={`row-${i}`}
                                 className="flex h-[152px] items-start justify-center pt-1 font-mono text-[9px] text-muted-foreground"
@@ -1159,75 +1163,77 @@ export default function ComponentsPage() {
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Table">
-                            <Table className="max-w-xs">
-                                <TableHeader>
-                                    <TableRow className="border-2 border-foreground bg-muted">
-                                        <TableHead className="border-r-2 border-foreground font-mono text-[10px] font-bold text-foreground">
-                                            HERO
-                                        </TableHead>
-                                        <TableHead className="border-r-2 border-foreground font-mono text-[10px] font-bold text-foreground">
-                                            STATUS
-                                        </TableHead>
-                                        <TableHead className="font-mono text-[10px] font-bold text-foreground">
-                                            AFFILIATION
-                                        </TableHead>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody>
-                                    <TableRow className="border-b-2 border-foreground">
-                                        <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
-                                            Tony Stark
-                                        </TableCell>
-                                        <TableCell className="border-r-2 border-foreground">
-                                            <Badge className="rounded-none border-2 border-foreground bg-foreground font-mono text-[10px] text-background">
-                                                ACTIVE
-                                            </Badge>
-                                        </TableCell>
-                                        <TableCell className="font-mono text-xs text-foreground">
-                                            Avengers
-                                        </TableCell>
-                                    </TableRow>
-                                    <TableRow className="border-b-2 border-foreground">
-                                        <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
-                                            Peter Parker
-                                        </TableCell>
-                                        <TableCell className="border-r-2 border-foreground">
-                                            <Badge className="rounded-none border-2 border-foreground bg-foreground font-mono text-[10px] text-background">
-                                                ACTIVE
-                                            </Badge>
-                                        </TableCell>
-                                        <TableCell className="font-mono text-xs text-foreground">
-                                            Avengers
-                                        </TableCell>
-                                    </TableRow>
-                                    <TableRow className="border-b-2 border-foreground">
-                                        <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
-                                            Stephen Strange
-                                        </TableCell>
-                                        <TableCell className="border-r-2 border-foreground">
-                                            <Badge className="rounded-none border-2 border-foreground bg-background font-mono text-[10px] text-foreground">
-                                                AWAY
-                                            </Badge>
-                                        </TableCell>
-                                        <TableCell className="font-mono text-xs text-foreground">
-                                            Illuminati
-                                        </TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
-                                            T&apos;Challa
-                                        </TableCell>
-                                        <TableCell className="border-r-2 border-foreground">
-                                            <Badge className="rounded-none border-2 border-foreground bg-foreground font-mono text-[10px] text-background">
-                                                ACTIVE
-                                            </Badge>
-                                        </TableCell>
-                                        <TableCell className="font-mono text-xs text-foreground">
-                                            Wakanda
-                                        </TableCell>
-                                    </TableRow>
-                                </TableBody>
-                            </Table>
+                            <div className="w-fit">
+                                <Table className="max-w-xs">
+                                    <TableHeader>
+                                        <TableRow className="border-2 border-foreground bg-muted">
+                                            <TableHead className="border-r-2 border-foreground font-mono text-[10px] font-bold text-foreground">
+                                                HERO
+                                            </TableHead>
+                                            <TableHead className="border-r-2 border-foreground font-mono text-[10px] font-bold text-foreground">
+                                                STATUS
+                                            </TableHead>
+                                            <TableHead className="font-mono text-[10px] font-bold text-foreground">
+                                                AFFILIATION
+                                            </TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
+                                        <TableRow className="border-b-2 border-foreground">
+                                            <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
+                                                Tony Stark
+                                            </TableCell>
+                                            <TableCell className="border-r-2 border-foreground">
+                                                <Badge className="rounded-none border-2 border-foreground bg-foreground font-mono text-[10px] text-background">
+                                                    ACTIVE
+                                                </Badge>
+                                            </TableCell>
+                                            <TableCell className="font-mono text-xs text-foreground">
+                                                Avengers
+                                            </TableCell>
+                                        </TableRow>
+                                        <TableRow className="border-b-2 border-foreground">
+                                            <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
+                                                Peter Parker
+                                            </TableCell>
+                                            <TableCell className="border-r-2 border-foreground">
+                                                <Badge className="rounded-none border-2 border-foreground bg-foreground font-mono text-[10px] text-background">
+                                                    ACTIVE
+                                                </Badge>
+                                            </TableCell>
+                                            <TableCell className="font-mono text-xs text-foreground">
+                                                Avengers
+                                            </TableCell>
+                                        </TableRow>
+                                        <TableRow className="border-b-2 border-foreground">
+                                            <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
+                                                Stephen Strange
+                                            </TableCell>
+                                            <TableCell className="border-r-2 border-foreground">
+                                                <Badge className="rounded-none border-2 border-foreground bg-background font-mono text-[10px] text-foreground">
+                                                    AWAY
+                                                </Badge>
+                                            </TableCell>
+                                            <TableCell className="font-mono text-xs text-foreground">
+                                                Illuminati
+                                            </TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell className="border-r-2 border-foreground font-mono text-xs text-foreground">
+                                                T&apos;Challa
+                                            </TableCell>
+                                            <TableCell className="border-r-2 border-foreground">
+                                                <Badge className="rounded-none border-2 border-foreground bg-foreground font-mono text-[10px] text-background">
+                                                    ACTIVE
+                                                </Badge>
+                                            </TableCell>
+                                            <TableCell className="font-mono text-xs text-foreground">
+                                                Wakanda
+                                            </TableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+                            </div>
                         </ComponentBox>
                     </div>
 
