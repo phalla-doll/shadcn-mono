@@ -175,6 +175,7 @@ import {
 } from "@/components/ui/tooltip"
 import Link from "next/link"
 import { useState } from "react"
+import { BrutalistHero } from "@/components/brutalist-hero"
 
 function SectionHeader({
     title,
@@ -222,23 +223,7 @@ export default function ShowcasePage() {
 
     return (
         <div className="min-h-screen bg-background">
-            <div className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                <div className="mx-auto max-w-7xl px-6 py-4">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h1 className="text-xl font-semibold">
-                                Shadcn Component Gallery
-                            </h1>
-                            <p className="text-sm text-muted-foreground">
-                                54 components available
-                            </p>
-                        </div>
-                        <Button asChild variant="outline" size="sm">
-                            <Link href="/">Back to Home</Link>
-                        </Button>
-                    </div>
-                </div>
-            </div>
+            <BrutalistHero />
 
             <div className="mx-auto max-w-7xl px-6 py-8">
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
