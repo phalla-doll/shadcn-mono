@@ -22,7 +22,9 @@ export const metadata: Metadata = {
         description:
             "A sleek monochrome UI component library built with ShadCN",
         type: "website",
+        url: "https://shadcn-mono.vercel.app",
     },
+    metadataBase: new URL("https://shadcn-mono.vercel.app"),
 }
 import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
