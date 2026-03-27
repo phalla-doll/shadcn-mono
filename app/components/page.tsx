@@ -231,7 +231,7 @@ function ComponentBox({
     children: React.ReactNode
 }) {
     return (
-        <div className="relative border-2 border-foreground bg-background">
+        <div className="relative flex h-full flex-col">
             {/* Title bar */}
             <div className="border-b-2 border-foreground bg-muted px-3 py-2">
                 <div className="flex items-center justify-between">
@@ -246,7 +246,7 @@ function ComponentBox({
             </div>
 
             {/* Content area */}
-            <div className="flex min-h-[100px] flex-wrap items-center justify-center gap-3 p-4">
+            <div className="flex flex-1 flex-wrap items-center justify-center gap-3 p-4">
                 {children}
             </div>
 
@@ -420,7 +420,7 @@ export default function ComponentsPage() {
                         <ComponentBox title="Radio Group">
                             <RadioGroup
                                 defaultValue="light"
-                                className="space-y-2"
+                                className="w-fit space-y-2"
                             >
                                 <div className="flex items-center gap-2">
                                     <RadioGroupItem
@@ -568,7 +568,7 @@ export default function ComponentsPage() {
 
                     <div className="border-b-2 border-foreground">
                         <ComponentBox title="Label & Field">
-                            <Field>
+                            <Field className="max-w-xs">
                                 <FieldLabel className="font-mono text-xs font-bold tracking-wider text-foreground uppercase">
                                     Stark ID
                                 </FieldLabel>
@@ -1159,7 +1159,7 @@ export default function ComponentsPage() {
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Table">
-                            <Table className="w-full max-w-xs">
+                            <Table className="max-w-xs">
                                 <TableHeader>
                                     <TableRow className="border-2 border-foreground bg-muted">
                                         <TableHead className="border-r-2 border-foreground font-mono text-[10px] font-bold text-foreground">
