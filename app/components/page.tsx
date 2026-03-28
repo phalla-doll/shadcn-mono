@@ -265,15 +265,6 @@ function ComponentBox({
             <div className="flex flex-1 flex-wrap items-center justify-center gap-3 p-4">
                 {children}
             </div>
-
-            {/* Grid line decoration (only for styled variant) */}
-            {!isDefault && (
-                <div className="pointer-events-none absolute inset-0">
-                    <div className="absolute top-0 left-1/4 h-full w-px bg-zinc-200/50 dark:bg-zinc-700/50" />
-                    <div className="absolute top-0 left-1/2 h-full w-px bg-zinc-200/50 dark:bg-zinc-700/50" />
-                    <div className="absolute top-0 left-3/4 h-full w-px bg-zinc-200/50 dark:bg-zinc-700/50" />
-                </div>
-            )}
         </div>
     )
 }
