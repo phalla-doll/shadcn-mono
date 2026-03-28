@@ -223,6 +223,26 @@ function SectionHeader({
     )
 }
 
+function TopRow() {
+    return (
+        <div className="col-span-full border-y-2 border-foreground bg-background py-4 pr-4 pl-12">
+            <div className="flex items-center justify-between font-mono">
+                <Link href="/">
+                    <Button
+                        variant="outline"
+                        className="rounded-none border-2 border-foreground bg-background font-mono text-xs text-foreground hover:bg-muted"
+                    >
+                        ← Back to Home
+                    </Button>
+                </Link>
+                <span className="text-xs font-bold tracking-widest text-foreground uppercase">
+                    Component Grid
+                </span>
+            </div>
+        </div>
+    )
+}
+
 function ComponentBox({
     title,
     children,
@@ -269,7 +289,7 @@ export default function ComponentsPage() {
 
     const SECTION_COUNT = 8
     const COMPONENT_COUNT = 49
-    const GRID_ROWS = SECTION_COUNT + Math.ceil(COMPONENT_COUNT / 2)
+    const GRID_ROWS = SECTION_COUNT + Math.ceil(COMPONENT_COUNT / 2) + 1
 
     const cellIndex = 0
 
@@ -323,6 +343,8 @@ export default function ComponentsPage() {
                             </div>
                         ))}
                     </div>
+
+                    <TopRow />
 
                     {/* FORMS SECTION */}
                     <SectionHeader title="Forms" icon="" id="forms" index={0} />
