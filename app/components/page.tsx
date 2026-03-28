@@ -177,24 +177,12 @@ import Link from "next/link"
 
 import { useState } from "react"
 
-// Grid coordinate system - generates labels like A1, A2, B1, B2, etc.
-const GRID_COLUMNS = 2
-
-function getGridCoordinate(rowIndex: number): string {
-    const col = rowIndex % GRID_COLUMNS
-    const colLetter = String.fromCharCode(65 + col) // A, B
-    const cellNum = Math.floor(rowIndex / GRID_COLUMNS) + 1
-    return `${colLetter}${cellNum}`
-}
-
 function SectionHeader({
     title,
-    icon,
     id,
     index,
 }: {
     title: string
-    icon: string
     id: string
     index: number
 }) {
@@ -285,7 +273,6 @@ export default function ComponentsPage() {
     const [progress] = useState(60)
     const [sliderValue, setSliderValue] = useState([50])
     const [isOpen, setIsOpen] = useState(false)
-    const [commandOpen, setCommandOpen] = useState(false)
 
     const SECTION_COUNT = 8
     const COMPONENT_COUNT = 49
@@ -347,7 +334,7 @@ export default function ComponentsPage() {
                     <TopRow />
 
                     {/* FORMS SECTION */}
-                    <SectionHeader title="Forms" icon="" id="forms" index={0} />
+                    <SectionHeader title="Forms" id="forms" index={0} />
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Input">
@@ -642,12 +629,7 @@ export default function ComponentsPage() {
                     </div>
 
                     {/* LAYOUT SECTION */}
-                    <SectionHeader
-                        title="Layout"
-                        icon=""
-                        id="layout"
-                        index={1}
-                    />
+                    <SectionHeader title="Layout" id="layout" index={1} />
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Card">
@@ -861,7 +843,6 @@ export default function ComponentsPage() {
                     {/* NAVIGATION SECTION */}
                     <SectionHeader
                         title="Navigation"
-                        icon=""
                         id="navigation"
                         index={2}
                     />
@@ -1097,12 +1078,7 @@ export default function ComponentsPage() {
                     </div>
 
                     {/* FEEDBACK SECTION */}
-                    <SectionHeader
-                        title="Feedback"
-                        icon=""
-                        id="feedback"
-                        index={3}
-                    />
+                    <SectionHeader title="Feedback" id="feedback" index={3} />
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Alert">
@@ -1217,7 +1193,6 @@ export default function ComponentsPage() {
                     {/* DATA DISPLAY SECTION */}
                     <SectionHeader
                         title="Data Display"
-                        icon=""
                         id="data-display"
                         index={4}
                     />
@@ -1431,12 +1406,7 @@ export default function ComponentsPage() {
                     </div>
 
                     {/* OVERLAYS SECTION */}
-                    <SectionHeader
-                        title="Overlays"
-                        icon=""
-                        id="overlays"
-                        index={5}
-                    />
+                    <SectionHeader title="Overlays" id="overlays" index={5} />
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Dialog">
@@ -1732,12 +1702,7 @@ export default function ComponentsPage() {
                     </div>
 
                     {/* BUTTONS SECTION */}
-                    <SectionHeader
-                        title="Buttons"
-                        icon=""
-                        id="buttons"
-                        index={6}
-                    />
+                    <SectionHeader title="Buttons" id="buttons" index={6} />
 
                     <div className="border-b-2 border-foreground md:border-r-2 md:border-foreground">
                         <ComponentBox title="Button Variants">
