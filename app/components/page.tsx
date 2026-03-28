@@ -359,12 +359,46 @@ export default function ComponentsPage() {
                     </div>
 
                     <div className="border-b-2 border-foreground">
-                        <ComponentBox title="Textarea">
-                            <Textarea
-                                placeholder="Mission briefing details..."
-                                className="w-full max-w-xs rounded-none border-2 border-foreground bg-background font-mono text-sm text-foreground"
-                                rows={3}
-                            />
+                        <ComponentBox title="Command">
+                            <Command className="w-full max-w-xs rounded-none border-2 border-foreground bg-background">
+                                <CommandInput
+                                    placeholder="Search J.A.R.V.I.S..."
+                                    className="font-mono text-xs text-foreground"
+                                />
+                                <CommandList className="font-mono text-xs text-foreground">
+                                    <CommandEmpty className="text-muted-foreground">
+                                        No systems found.
+                                    </CommandEmpty>
+                                    <CommandGroup
+                                        heading="ARC REACTOR"
+                                        className="text-foreground"
+                                    >
+                                        <CommandItem className="text-foreground hover:bg-muted">
+                                            Initialize Mark VII
+                                        </CommandItem>
+                                        <CommandItem className="text-foreground hover:bg-muted">
+                                            Activate Defense Mode
+                                        </CommandItem>
+                                        <CommandItem className="text-foreground hover:bg-muted">
+                                            Run Diagnostics
+                                        </CommandItem>
+                                    </CommandGroup>
+                                    <CommandGroup
+                                        heading="FACILITIES"
+                                        className="text-foreground"
+                                    >
+                                        <CommandItem className="text-foreground hover:bg-muted">
+                                            Stark Tower
+                                        </CommandItem>
+                                        <CommandItem className="text-foreground hover:bg-muted">
+                                            Avengers Compound
+                                        </CommandItem>
+                                        <CommandItem className="text-foreground hover:bg-muted">
+                                            Malibu Mansion
+                                        </CommandItem>
+                                    </CommandGroup>
+                                </CommandList>
+                            </Command>
                         </ComponentBox>
                     </div>
 
@@ -1688,46 +1722,12 @@ export default function ComponentsPage() {
                     </div>
 
                     <div className="border-b-2 border-foreground">
-                        <ComponentBox title="Command">
-                            <Command className="w-full max-w-xs rounded-none border-2 border-foreground bg-background">
-                                <CommandInput
-                                    placeholder="Search J.A.R.V.I.S..."
-                                    className="font-mono text-xs text-foreground"
-                                />
-                                <CommandList className="font-mono text-xs text-foreground">
-                                    <CommandEmpty className="text-muted-foreground">
-                                        No systems found.
-                                    </CommandEmpty>
-                                    <CommandGroup
-                                        heading="ARC REACTOR"
-                                        className="text-foreground"
-                                    >
-                                        <CommandItem className="text-foreground hover:bg-muted">
-                                            Initialize Mark VII
-                                        </CommandItem>
-                                        <CommandItem className="text-foreground hover:bg-muted">
-                                            Activate Defense Mode
-                                        </CommandItem>
-                                        <CommandItem className="text-foreground hover:bg-muted">
-                                            Run Diagnostics
-                                        </CommandItem>
-                                    </CommandGroup>
-                                    <CommandGroup
-                                        heading="FACILITIES"
-                                        className="text-foreground"
-                                    >
-                                        <CommandItem className="text-foreground hover:bg-muted">
-                                            Stark Tower
-                                        </CommandItem>
-                                        <CommandItem className="text-foreground hover:bg-muted">
-                                            Avengers Compound
-                                        </CommandItem>
-                                        <CommandItem className="text-foreground hover:bg-muted">
-                                            Malibu Mansion
-                                        </CommandItem>
-                                    </CommandGroup>
-                                </CommandList>
-                            </Command>
+                        <ComponentBox title="Textarea">
+                            <Textarea
+                                placeholder="Mission briefing details..."
+                                className="w-full max-w-xs rounded-none border-2 border-foreground bg-background font-mono text-sm text-foreground"
+                                rows={3}
+                            />
                         </ComponentBox>
                     </div>
 
