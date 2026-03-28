@@ -317,7 +317,7 @@ export default function ComponentsPage() {
                         {Array.from({ length: GRID_ROWS }).map((_, i) => (
                             <div
                                 key={`row-${i}`}
-                                className="flex h-[152px] items-start justify-center pt-1 font-mono text-[9px] text-muted-foreground"
+                                className="flex h-38 items-start justify-center pt-1 font-mono text-[9px] text-muted-foreground"
                             >
                                 {String(i + 1).padStart(2, "0")}
                             </div>
@@ -1393,7 +1393,7 @@ export default function ComponentsPage() {
                                         Open Dialog
                                     </Button>
                                 </DialogTrigger>
-                                <DialogContent className="rounded-none border-2 border-foreground bg-background sm:max-w-[425px]">
+                                <DialogContent className="rounded-none border-2 border-foreground bg-background sm:max-w-106.25">
                                     <DialogHeader className="border-b-2 border-foreground pb-4">
                                         <DialogTitle className="font-mono text-sm text-foreground">
                                             Edit Profile
