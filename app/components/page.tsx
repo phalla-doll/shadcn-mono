@@ -193,7 +193,7 @@ function SectionHeader({
             className="relative col-span-full mb-0 scroll-mt-20 border-y-2 border-zinc-300 bg-zinc-100 py-4 pr-4 pl-12 dark:border-zinc-700 dark:bg-zinc-800"
         >
             <div className="absolute top-0 left-0 flex h-full w-8 items-center justify-center border-r-2 border-zinc-200/50 bg-zinc-200/30 dark:border-zinc-700/50 dark:bg-zinc-700/30">
-                <span className="-rotate-90 font-mono text-[10px] font-bold whitespace-nowrap text-zinc-50 dark:text-zinc-400">
+                <span className="-rotate-90 font-mono text-[10px] font-bold whitespace-nowrap text-zinc-700 dark:text-zinc-300">
                     SEC {sectionCode}
                 </span>
             </div>
@@ -203,7 +203,7 @@ function SectionHeader({
                     <span>{title}</span>
                     <span className="text-xs opacity-60">]</span>
                 </h2>
-                <span className="text-[10px] tracking-wider text-zinc-400 uppercase dark:text-zinc-500">
+                <span className="text-[10px] tracking-wider text-zinc-600 uppercase dark:text-zinc-400">
                     {id}
                 </span>
             </div>
@@ -223,7 +223,7 @@ function TopRow() {
                         ← Back to Home
                     </Button>
                 </Link>
-                <span className="text-xs font-bold tracking-widest text-zinc-50 uppercase dark:text-zinc-50 dark:text-zinc-400">
+                <span className="text-xs font-bold tracking-widest text-zinc-600 uppercase dark:text-zinc-300">
                     Component Grid
                 </span>
             </div>
@@ -243,7 +243,7 @@ function ComponentBox({
             {/* Title bar */}
             <div className="border-b-2 border-zinc-300 bg-zinc-50 px-3 py-2 dark:border-zinc-700 dark:bg-zinc-900">
                 <div className="flex items-center justify-between">
-                    <h4 className="font-mono text-[11px] font-bold tracking-wider text-zinc-50 uppercase dark:text-zinc-50 dark:text-zinc-400">
+                    <h4 className="font-mono text-[11px] font-bold tracking-wider text-zinc-700 uppercase dark:text-zinc-300">
                         {title}
                     </h4>
                     <div className="flex gap-1">
@@ -286,14 +286,14 @@ export default function ComponentsPage() {
             <div className="sticky top-0 z-50 border-b-2 border-zinc-300 bg-background dark:border-zinc-700">
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
                     <div className="flex items-center gap-4">
-                        <span className="text-xs font-bold tracking-widest text-zinc-500 uppercase dark:text-zinc-400">
+                        <span className="text-xs font-bold tracking-widest text-zinc-700 uppercase dark:text-zinc-300">
                             {"// COMPONENT GRID"}
                         </span>
-                        <span className="text-[10px] text-zinc-400 dark:text-zinc-50">
+                        <span className="text-[10px] text-zinc-600 dark:text-zinc-400">
                             v2.0.0
                         </span>
                     </div>
-                    <div className="flex items-center gap-4 text-[10px] text-zinc-400 dark:text-zinc-50">
+                    <div className="flex items-center gap-4 text-[10px] text-zinc-600 dark:text-zinc-400">
                         <span>COLUMNS: 2</span>
                         <span>|</span>
                         <span>GAP: 0</span>
@@ -307,10 +307,10 @@ export default function ComponentsPage() {
             <div className="mx-auto max-w-7xl">
                 <div className="flex border-b-2 border-zinc-300 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
                     <div className="w-8 border-r-2 border-zinc-300 dark:border-zinc-700" />
-                    <div className="flex-1 border-r-2 border-zinc-300 py-2 text-center font-mono text-[10px] font-bold tracking-widest text-zinc-50 uppercase dark:border-zinc-700 dark:text-zinc-50 dark:text-zinc-400">
+                    <div className="flex-1 border-r-2 border-zinc-300 py-2 text-center font-mono text-[10px] font-bold tracking-widest text-zinc-700 uppercase dark:border-zinc-700 dark:text-zinc-300">
                         COL A
                     </div>
-                    <div className="flex-1 py-2 text-center font-mono text-[10px] font-bold tracking-widest text-zinc-50 uppercase dark:text-zinc-50 dark:text-zinc-400">
+                    <div className="flex-1 py-2 text-center font-mono text-[10px] font-bold tracking-widest text-zinc-700 uppercase dark:text-zinc-300">
                         COL B
                     </div>
                 </div>
@@ -324,7 +324,7 @@ export default function ComponentsPage() {
                         {Array.from({ length: GRID_ROWS }).map((_, i) => (
                             <div
                                 key={`row-${i}`}
-                                className="flex h-38 items-start justify-center pt-1 font-mono text-[9px] text-zinc-400 dark:text-zinc-50"
+                                className="flex h-38 items-start justify-center pt-1 font-mono text-[9px] text-zinc-600 dark:text-zinc-400"
                             >
                                 {String(i + 1).padStart(2, "0")}
                             </div>
@@ -353,7 +353,7 @@ export default function ComponentsPage() {
                                     className="font-mono text-xs text-zinc-600 dark:text-zinc-300"
                                 />
                                 <CommandList className="font-mono text-xs text-zinc-600 dark:text-zinc-300">
-                                    <CommandEmpty className="text-zinc-400 dark:text-zinc-50">
+                                    <CommandEmpty className="text-zinc-600 dark:text-zinc-400">
                                         No systems found.
                                     </CommandEmpty>
                                     <CommandGroup
@@ -396,7 +396,7 @@ export default function ComponentsPage() {
                                     <Checkbox
                                         id="check1"
                                         defaultChecked
-                                        className="border-2 border-zinc-300 data-[state=checked]:bg-zinc-50 data-[state=checked]:text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
+                                        className="border-2 border-zinc-300 data-[state=checked]:bg-zinc-50 data-[state=checked]:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
                                     />
                                     <Label
                                         htmlFor="check1"
@@ -409,7 +409,7 @@ export default function ComponentsPage() {
                                     <Checkbox
                                         id="check2"
                                         defaultChecked
-                                        className="border-2 border-zinc-300 data-[state=checked]:bg-zinc-50 data-[state=checked]:text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
+                                        className="border-2 border-zinc-300 data-[state=checked]:bg-zinc-50 data-[state=checked]:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
                                     />
                                     <Label
                                         htmlFor="check2"
@@ -421,7 +421,7 @@ export default function ComponentsPage() {
                                 <div className="flex items-center gap-2">
                                     <Checkbox
                                         id="check3"
-                                        className="border-2 border-zinc-300 data-[state=checked]:bg-zinc-50 data-[state=checked]:text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
+                                        className="border-2 border-zinc-300 data-[state=checked]:bg-zinc-50 data-[state=checked]:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
                                     />
                                     <Label
                                         htmlFor="check3"
@@ -562,7 +562,7 @@ export default function ComponentsPage() {
                                     step={1}
                                     className="dark:border-zinc-700 dark:bg-zinc-400 [&_span[data-role=slider]]:border-2 [&_span[data-role=slider]]:border-zinc-300 [&_span[data-role=slider]]:bg-zinc-50"
                                 />
-                                <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                <p className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                     REACTOR_POWER: {sliderValue}%
                                 </p>
                             </div>
@@ -638,7 +638,7 @@ export default function ComponentsPage() {
                                     <CardTitle className="font-mono text-sm text-zinc-600 dark:text-zinc-300">
                                         Stark Industries
                                     </CardTitle>
-                                    <CardDescription className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                    <CardDescription className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                         Advanced technology solutions since 1940
                                     </CardDescription>
                                 </CardHeader>
@@ -708,19 +708,19 @@ export default function ComponentsPage() {
                                 <TabsList className="h-auto rounded-none border-2 border-zinc-300 bg-background p-0 dark:border-zinc-700">
                                     <TabsTrigger
                                         value="overview"
-                                        className="rounded-none border-r-2 border-zinc-300 font-mono text-[10px] data-[state=active]:bg-zinc-50 data-[state=active]:text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
+                                        className="rounded-none border-r-2 border-zinc-300 font-mono text-[10px] data-[state=active]:bg-zinc-50 data-[state=active]:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
                                     >
                                         Overview
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="specs"
-                                        className="rounded-none border-r-2 border-zinc-300 font-mono text-[10px] data-[state=active]:bg-zinc-50 data-[state=active]:text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
+                                        className="rounded-none border-r-2 border-zinc-300 font-mono text-[10px] data-[state=active]:bg-zinc-50 data-[state=active]:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
                                     >
                                         Specs
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="history"
-                                        className="rounded-none font-mono text-[10px] data-[state=active]:bg-zinc-50 data-[state=active]:text-zinc-50 dark:bg-zinc-400 dark:text-zinc-900"
+                                        className="rounded-none font-mono text-[10px] data-[state=active]:bg-zinc-50 data-[state=active]:text-zinc-900 dark:bg-zinc-400 dark:text-zinc-900"
                                     >
                                         History
                                     </TabsTrigger>
@@ -805,7 +805,7 @@ export default function ComponentsPage() {
                                     <p className="font-bold text-red-600 dark:text-red-400">
                                         CLASSIFIED - LEVEL 7 CLEARANCE
                                     </p>
-                                    <p className="mt-1 text-zinc-400 dark:text-zinc-50">
+                                    <p className="mt-1 text-zinc-600 dark:text-zinc-400">
                                         Project PEGASUS coordinates: 34.0522° N,
                                         118.2437° W
                                     </p>
@@ -819,7 +819,7 @@ export default function ComponentsPage() {
                             <div className="w-full max-w-xs">
                                 <AspectRatio
                                     ratio={16 / 9}
-                                    className="flex items-center justify-center rounded-none border-2 border-zinc-300 bg-muted font-mono text-xs text-zinc-400 dark:border-zinc-700 dark:text-zinc-50"
+                                    className="flex items-center justify-center rounded-none border-2 border-zinc-300 bg-muted font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-400"
                                 >
                                     16:9
                                 </AspectRatio>
@@ -905,7 +905,7 @@ export default function ComponentsPage() {
                                         <PaginationLink
                                             href="#"
                                             isActive
-                                            className="rounded-none border-2 border-zinc-300 bg-zinc-50 text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
+                                            className="rounded-none border-2 border-zinc-300 bg-zinc-50 text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900"
                                         >
                                             2
                                         </PaginationLink>
@@ -968,7 +968,7 @@ export default function ComponentsPage() {
                         <ComponentBox title="Menubar">
                             <Menubar className="rounded-none border-2 border-zinc-300 bg-background dark:border-zinc-700">
                                 <MenubarMenu>
-                                    <MenubarTrigger className="rounded-none font-mono text-xs text-zinc-600 hover:bg-zinc-100 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-700 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
+                                    <MenubarTrigger className="rounded-none font-mono text-xs text-zinc-600 hover:bg-zinc-100 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-700 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
                                         File
                                     </MenubarTrigger>
                                     <MenubarContent className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
@@ -984,7 +984,7 @@ export default function ComponentsPage() {
                                     </MenubarContent>
                                 </MenubarMenu>
                                 <MenubarMenu>
-                                    <MenubarTrigger className="rounded-none font-mono text-xs text-zinc-600 hover:bg-zinc-100 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-700 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
+                                    <MenubarTrigger className="rounded-none font-mono text-xs text-zinc-600 hover:bg-zinc-100 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-700 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
                                         Edit
                                     </MenubarTrigger>
                                     <MenubarContent className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
@@ -1000,7 +1000,7 @@ export default function ComponentsPage() {
                                     </MenubarContent>
                                 </MenubarMenu>
                                 <MenubarMenu>
-                                    <MenubarTrigger className="rounded-none font-mono text-xs text-zinc-600 hover:bg-zinc-100 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-700 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
+                                    <MenubarTrigger className="rounded-none font-mono text-xs text-zinc-600 hover:bg-zinc-100 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-700 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
                                         Suits
                                     </MenubarTrigger>
                                     <MenubarContent className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
@@ -1024,7 +1024,7 @@ export default function ComponentsPage() {
                             <NavigationMenu>
                                 <NavigationMenuList>
                                     <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-50 dark:border-zinc-700 dark:text-zinc-300 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
+                                        <NavigationMenuTrigger className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=open]:bg-zinc-50 data-[state=open]:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 data-[state=open]:dark:bg-zinc-400 data-[state=open]:dark:text-zinc-900">
                                             Divisions
                                         </NavigationMenuTrigger>
                                         <NavigationMenuContent className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
@@ -1056,7 +1056,7 @@ export default function ComponentsPage() {
                     <div className="border-b-2 border-zinc-300 dark:border-zinc-700">
                         <ComponentBox title="Context Menu">
                             <ContextMenu>
-                                <ContextMenuTrigger className="flex h-24 w-full max-w-xs items-center justify-center rounded-none border-2 border-dashed border-zinc-300 bg-background font-mono text-xs text-zinc-400 dark:border-zinc-700 dark:text-zinc-50">
+                                <ContextMenuTrigger className="flex h-24 w-full max-w-xs items-center justify-center rounded-none border-2 border-dashed border-zinc-300 bg-background font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">
                                     Right click for options
                                 </ContextMenuTrigger>
                                 <ContextMenuContent className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
@@ -1087,7 +1087,7 @@ export default function ComponentsPage() {
                                     <AlertTitle className="font-mono text-xs font-bold text-zinc-600 dark:text-zinc-300">
                                         System Online
                                     </AlertTitle>
-                                    <AlertDescription className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                    <AlertDescription className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                         All arc reactor systems are functioning
                                         normally.
                                     </AlertDescription>
@@ -1124,7 +1124,7 @@ export default function ComponentsPage() {
                                         <AlertDialogTitle className="font-mono text-sm text-zinc-600 dark:text-zinc-300">
                                             Are you sure?
                                         </AlertDialogTitle>
-                                        <AlertDialogDescription className="font-mono text-xs text-zinc-400 dark:text-zinc-50">
+                                        <AlertDialogDescription className="font-mono text-xs text-zinc-600 dark:text-zinc-400">
                                             This action cannot be undone.
                                         </AlertDialogDescription>
                                     </AlertDialogHeader>
@@ -1132,7 +1132,7 @@ export default function ComponentsPage() {
                                         <AlertDialogCancel className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700">
                                             Cancel
                                         </AlertDialogCancel>
-                                        <AlertDialogAction className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-50 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                        <AlertDialogAction className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-900 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                             Continue
                                         </AlertDialogAction>
                                     </AlertDialogFooter>
@@ -1148,7 +1148,7 @@ export default function ComponentsPage() {
                                     value={progress}
                                     className="h-2 rounded-none border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-400 [&>div]:bg-zinc-50"
                                 />
-                                <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                <p className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                     ASSEMBLY: {progress}% COMPLETE
                                 </p>
                             </div>
@@ -1168,7 +1168,7 @@ export default function ComponentsPage() {
                         <ComponentBox title="Spinner">
                             <div className="flex flex-col items-center gap-3">
                                 <Spinner className="h-8 w-8 animate-spin text-zinc-600 dark:text-zinc-300" />
-                                <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                <p className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                     LOADING...
                                 </p>
                             </div>
@@ -1184,7 +1184,7 @@ export default function ComponentsPage() {
                             >
                                 Alert Avengers
                             </Button>
-                            <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                            <p className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                 F.R.I.D.A.Y. ready
                             </p>
                         </ComponentBox>
@@ -1220,7 +1220,7 @@ export default function ComponentsPage() {
                                                 Tony Stark
                                             </TableCell>
                                             <TableCell className="border-r-2 border-zinc-300 dark:border-zinc-700">
-                                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                                     ACTIVE
                                                 </Badge>
                                             </TableCell>
@@ -1233,7 +1233,7 @@ export default function ComponentsPage() {
                                                 Peter Parker
                                             </TableCell>
                                             <TableCell className="border-r-2 border-zinc-300 dark:border-zinc-700">
-                                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                                     ACTIVE
                                                 </Badge>
                                             </TableCell>
@@ -1259,7 +1259,7 @@ export default function ComponentsPage() {
                                                 T&apos;Challa
                                             </TableCell>
                                             <TableCell className="border-r-2 border-zinc-300 dark:border-zinc-700">
-                                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                                     ACTIVE
                                                 </Badge>
                                             </TableCell>
@@ -1276,7 +1276,7 @@ export default function ComponentsPage() {
                     <div className="border-b-2 border-zinc-300 dark:border-zinc-700">
                         <ComponentBox title="Badge">
                             <div className="flex flex-wrap gap-2">
-                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                <Badge className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                     STARK INDUSTRIES
                                 </Badge>
                                 <Badge className="rounded-none border-2 border-zinc-300 bg-background font-mono text-[10px] text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
@@ -1297,7 +1297,7 @@ export default function ComponentsPage() {
                             <div className="flex -space-x-2">
                                 <Avatar className="rounded-full ring-2 ring-background">
                                     <AvatarImage src="https://github.com/shadcn.png" />
-                                    <AvatarFallback className="rounded-full bg-zinc-50 font-mono text-xs text-zinc-50 dark:bg-zinc-400 dark:text-zinc-900">
+                                    <AvatarFallback className="rounded-full bg-zinc-50 font-mono text-xs text-zinc-900 dark:bg-zinc-400 dark:text-zinc-900">
                                         TS
                                     </AvatarFallback>
                                 </Avatar>
@@ -1317,7 +1317,7 @@ export default function ComponentsPage() {
                                     </AvatarFallback>
                                 </Avatar>
                             </div>
-                            <p className="mt-2 font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                            <p className="mt-2 font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                 Tony, Peter, Bruce, Carol
                             </p>
                         </ComponentBox>
@@ -1355,7 +1355,7 @@ export default function ComponentsPage() {
                                                             <span className="block text-lg font-bold text-zinc-600 dark:text-zinc-300">
                                                                 {suit}
                                                             </span>
-                                                            <span className="text-[10px] text-zinc-400 dark:text-zinc-50">
+                                                            <span className="text-[10px] text-zinc-600 dark:text-zinc-400">
                                                                 IRON MAN SUIT
                                                             </span>
                                                         </div>
@@ -1381,7 +1381,7 @@ export default function ComponentsPage() {
                                     K
                                 </Kbd>
                             </KbdGroup>
-                            <p className="mt-2 font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                            <p className="mt-2 font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                 Open command palette
                             </p>
                         </ComponentBox>
@@ -1398,7 +1398,7 @@ export default function ComponentsPage() {
                                         Hover me
                                     </Button>
                                 </TooltipTrigger>
-                                <TooltipContent className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                <TooltipContent className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                     <p>Tooltip content</p>
                                 </TooltipContent>
                             </Tooltip>
@@ -1424,7 +1424,7 @@ export default function ComponentsPage() {
                                         <DialogTitle className="font-mono text-sm text-zinc-600 dark:text-zinc-300">
                                             Edit Profile
                                         </DialogTitle>
-                                        <DialogDescription className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                        <DialogDescription className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                             Make changes to your profile here.
                                         </DialogDescription>
                                     </DialogHeader>
@@ -1478,7 +1478,7 @@ export default function ComponentsPage() {
                                         >
                                             Cancel
                                         </Button>
-                                        <Button className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-50 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                        <Button className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-900 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                             Save Changes
                                         </Button>
                                     </div>
@@ -1503,7 +1503,7 @@ export default function ComponentsPage() {
                                         <SheetTitle className="font-mono text-sm text-zinc-600 dark:text-zinc-300">
                                             Navigation
                                         </SheetTitle>
-                                        <SheetDescription className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                        <SheetDescription className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                             Quick access to all sections.
                                         </SheetDescription>
                                     </SheetHeader>
@@ -1543,7 +1543,7 @@ export default function ComponentsPage() {
                                         ))}
                                         <Link
                                             href="#"
-                                            className="flex items-center gap-3 p-3 font-mono text-xs text-zinc-400 hover:bg-zinc-100 hover:text-zinc-600 dark:bg-zinc-800 dark:text-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-700"
+                                            className="flex items-center gap-3 p-3 font-mono text-xs text-zinc-600 hover:bg-zinc-100 hover:text-zinc-700 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
                                         >
                                             <span>🚪</span>
                                             <span className="tracking-wider uppercase">
@@ -1572,7 +1572,7 @@ export default function ComponentsPage() {
                                         <DrawerTitle className="font-mono text-sm text-zinc-600 dark:text-zinc-300">
                                             Quick Actions
                                         </DrawerTitle>
-                                        <DrawerDescription className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                        <DrawerDescription className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                             Choose an action to perform.
                                         </DrawerDescription>
                                     </DrawerHeader>
@@ -1639,7 +1639,7 @@ export default function ComponentsPage() {
                                         <div className="space-y-2">
                                             <div className="flex justify-between border-b border-border pb-1">
                                                 <span>Power</span>
-                                                <Badge className="rounded-none border border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                                <Badge className="rounded-none border border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                                     100%
                                                 </Badge>
                                             </div>
@@ -1651,7 +1651,7 @@ export default function ComponentsPage() {
                                             </div>
                                             <div className="flex justify-between">
                                                 <span>Systems</span>
-                                                <Badge className="rounded-none border border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-50 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                                <Badge className="rounded-none border border-zinc-300 bg-zinc-50 font-mono text-[10px] text-zinc-900 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                                     ONLINE
                                                 </Badge>
                                             </div>
@@ -1678,10 +1678,10 @@ export default function ComponentsPage() {
                                         <h4 className="font-mono text-sm font-bold text-zinc-600 dark:text-zinc-300">
                                             Tony Stark
                                         </h4>
-                                        <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                        <p className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                             CEO, Stark Industries
                                         </p>
-                                        <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                                        <p className="font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                                             Genius. Billionaire. Playboy.
                                             Philanthropist.
                                         </p>
@@ -1707,7 +1707,7 @@ export default function ComponentsPage() {
                     <div className="border-b-2 border-zinc-300 md:border-r-2 md:border-zinc-300 dark:border-zinc-700">
                         <ComponentBox title="Button Variants">
                             <div className="flex flex-wrap gap-2">
-                                <Button className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-50 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                <Button className="rounded-none border-2 border-zinc-300 bg-zinc-50 font-mono text-xs text-zinc-900 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                     Deploy
                                 </Button>
                                 <Button className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700">
@@ -1716,7 +1716,7 @@ export default function ComponentsPage() {
                                 <Button className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700">
                                     Scout Mode
                                 </Button>
-                                <Button className="rounded-none bg-transparent font-mono text-xs text-zinc-400 hover:bg-zinc-100 hover:text-zinc-600 dark:bg-zinc-800 dark:text-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-700">
+                                <Button className="rounded-none bg-transparent font-mono text-xs text-zinc-600 hover:bg-zinc-100 hover:text-zinc-700 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700">
                                     Stealth
                                 </Button>
                                 <Button className="rounded-none border-2 border-red-600 bg-red-600 font-mono text-xs text-white hover:opacity-90 dark:border-red-400 dark:bg-red-500">
@@ -1732,16 +1732,16 @@ export default function ComponentsPage() {
                     <div className="border-b-2 border-zinc-300 dark:border-zinc-700">
                         <ComponentBox title="Button Sizes">
                             <div className="flex flex-wrap items-center gap-2">
-                                <Button className="h-6 rounded-none border-2 border-zinc-300 bg-zinc-50 px-2 font-mono text-[10px] text-zinc-50 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                <Button className="h-6 rounded-none border-2 border-zinc-300 bg-zinc-50 px-2 font-mono text-[10px] text-zinc-900 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                     XS
                                 </Button>
-                                <Button className="h-7 rounded-none border-2 border-zinc-300 bg-zinc-50 px-3 font-mono text-xs text-zinc-50 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                <Button className="h-7 rounded-none border-2 border-zinc-300 bg-zinc-50 px-3 font-mono text-xs text-zinc-900 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                     SM
                                 </Button>
-                                <Button className="h-8 rounded-none border-2 border-zinc-300 bg-zinc-50 px-4 font-mono text-xs text-zinc-50 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                <Button className="h-8 rounded-none border-2 border-zinc-300 bg-zinc-50 px-4 font-mono text-xs text-zinc-900 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                     DEFAULT
                                 </Button>
-                                <Button className="h-10 rounded-none border-2 border-zinc-300 bg-zinc-50 px-6 font-mono text-sm text-zinc-50 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
+                                <Button className="h-10 rounded-none border-2 border-zinc-300 bg-zinc-50 px-6 font-mono text-sm text-zinc-900 hover:opacity-90 dark:border-zinc-700 dark:bg-zinc-400 dark:text-zinc-900">
                                     LG
                                 </Button>
                             </div>
@@ -1769,13 +1769,13 @@ export default function ComponentsPage() {
                             <div className="flex gap-2">
                                 <Toggle
                                     aria-label="Toggle bold"
-                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-50 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
+                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
                                 >
                                     <span className="font-bold">B</span>
                                 </Toggle>
                                 <Toggle
                                     aria-label="Toggle highlight"
-                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-50 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
+                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
                                 >
                                     <span>H</span>
                                 </Toggle>
@@ -1792,21 +1792,21 @@ export default function ComponentsPage() {
                                 <ToggleGroupItem
                                     value="bold"
                                     aria-label="Bold"
-                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-50 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
+                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
                                 >
                                     B
                                 </ToggleGroupItem>
                                 <ToggleGroupItem
                                     value="italic"
                                     aria-label="Italic"
-                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-50 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
+                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
                                 >
                                     I
                                 </ToggleGroupItem>
                                 <ToggleGroupItem
                                     value="underline"
                                     aria-label="Underline"
-                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-50 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
+                                    className="rounded-none border-2 border-zinc-300 bg-background font-mono text-xs text-zinc-600 data-[state=on]:bg-zinc-50 data-[state=on]:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 data-[state=on]:dark:bg-zinc-400 data-[state=on]:dark:text-zinc-900"
                                 >
                                     U
                                 </ToggleGroupItem>
@@ -1820,7 +1820,7 @@ export default function ComponentsPage() {
                             <div className="text-2xl font-bold text-border">
                                 ▪
                             </div>
-                            <p className="mt-2 text-[10px] tracking-wider text-zinc-400 uppercase dark:text-zinc-50">
+                            <p className="mt-2 text-[10px] tracking-wider text-zinc-600 uppercase dark:text-zinc-400">
                                 End of Grid
                             </p>
                         </div>
@@ -1831,7 +1831,7 @@ export default function ComponentsPage() {
                             <div className="text-2xl font-bold text-border">
                                 ▪
                             </div>
-                            <p className="mt-2 text-[10px] tracking-wider text-zinc-400 uppercase dark:text-zinc-50">
+                            <p className="mt-2 text-[10px] tracking-wider text-zinc-600 uppercase dark:text-zinc-400">
                                 End of Grid
                             </p>
                         </div>
@@ -1841,7 +1841,7 @@ export default function ComponentsPage() {
 
             {/* Bottom grid info bar */}
             <div className="border-t-2 border-zinc-300 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 font-mono text-[10px] text-zinc-400 dark:text-zinc-50">
+                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 font-mono text-[10px] text-zinc-600 dark:text-zinc-400">
                     <span>TOTAL CELLS: {cellIndex}</span>
                     <span>|</span>
                     <span>GRID: 2x{Math.ceil(cellIndex / 2)}</span>
